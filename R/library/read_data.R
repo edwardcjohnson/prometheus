@@ -15,7 +15,7 @@ read_config <- function (config_file) {
 read_raw_data <- function(config) {
 	file_name = config$data_file_name
 	# initialized with the ETL output path
-    file_path = '/net/mw-0775-nas22p/isg_prodops_work/ejon9/pythia/ruff-time-series/'
+    file_path = 'default/path/to/file'
     if (file_not_found(file_path, file_name)) {
     	print(paste0("File not found in ", file_path, ". Using absolute file path."))
     	file_path <- find_local_file_path(file_name)
