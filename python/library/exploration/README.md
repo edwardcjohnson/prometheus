@@ -1,1 +1,1 @@
-Modules related to exploration of data
+Modules related to data exploration
