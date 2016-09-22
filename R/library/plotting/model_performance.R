@@ -25,7 +25,7 @@ training <- twoClassSim(1000)
 testing  <- twoClassSim(1000)
 
 
-## Train 3 models 
+## Train 3 example models 
 ctrl <- trainControl(method = "cv", classProbs = TRUE,
                      summaryFunction = twoClassSummary)
 
@@ -41,6 +41,10 @@ fit3 <- train(Class ~ ., data = training,
                  method = "C5.0", metric = "ROC",
                  tuneLength = 10,
                  trControl = ctrl)
+                 
+## Variable Importance
+fit3_var_imp <- varImp(fit3, scale = TRUE)
+plot(fit3_var_imp, top = 10)
 
 ## Generate the test set results
 lift_results <- data.frame(Class = lift_testing$Class)
