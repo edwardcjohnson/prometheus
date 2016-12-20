@@ -1,0 +1,7 @@
+*.zip
+
+*.csv
+
+R/data/*
+
+python/data/*
