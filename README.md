@@ -1,2 +1,2 @@
 # Prometheus
-A machine learning model building framework
+A compilation of template scripts and utility functions for data exploration and model building.
