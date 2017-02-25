@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # http://seaborn.pydata.org/tutorial/categorical.html
 
 import numpy as np
@@ -12,6 +14,9 @@ titanic = sns.load_dataset("titanic")
 tips = sns.load_dataset("tips")
 iris = sns.load_dataset("iris")
 
+fig,axarray = plt.subplots(1,1,figsize=[15,10],sharey="row",sharex="col") 
+
+
 sns.boxplot(x="day", y="total_bill", hue="time", data=tips)
 
 sns.pointplot(x="class", y="survived", hue="sex", data=titanic,
@@ -19,3 +24,5 @@ sns.pointplot(x="class", y="survived", hue="sex", data=titanic,
               markers=["^", "o"], linestyles=["-", "--"])
             
 sns.factorplot(x="day", y="total_bill", hue="smoker", data=tips);
+
+plt.show()
