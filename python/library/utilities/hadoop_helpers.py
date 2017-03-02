@@ -105,7 +105,6 @@ def refresh_impala_metadata(impala_server, impala_table):
 
     Args:
         impala_server: a string specifying the impala server
-                       e.g. "hrtimpslb.allstate.com"
         impala_table: The name of the table you want to
                       invalidate the metadata on.
     """
@@ -124,7 +123,6 @@ def exe_impala_script(impala_server, sql_file):
 
     Args:
         impala_server: a string specifying the impala server
-                       e.g. "hrtimpslb.allstate.com"
         sql_file: the sql file containing the query you want
                   executed via impala. 
 
