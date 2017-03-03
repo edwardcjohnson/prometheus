@@ -4,8 +4,8 @@ source('./path/to/library/train_glm.R')
 
 context("Build a GLM")
 
-setwd('/net/mw-0775-nas22p/isg_prodops_work/ejon9/pythia/')
-file <- './ruff-time-series/pythia_monthly_agg_out_2010_2015.csv'
+setwd('/path/to/project_dir/')
+file <- './data.csv'
 
 test_that("Model formula object can be created", {
 	glm_features <- c("x1", "x2", "x3")
